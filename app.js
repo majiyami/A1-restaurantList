@@ -40,14 +40,15 @@ app.get('/', (req, res) => {
 
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim().toLowerCase()
-  console.log(keyword)
-  const searchRestaurant = restaurantList.results.filter(
-    (restaurant) => {
-      return restaurant.name.toLowerCase().includes(keyword) ||
-        restaurant.category.includes(keyword)
-    }
-  )
-  res.render("index", { restaurants: searchRestaurant, keyword: keyword })
+  return restaurantList.find()
+    .lean()
+    .then((restaurant) => {
+      const restaurantsSearch = restaurant.filter((data) => {
+        return data.name.toLowerCase().includes(keyword) || data.category.includes(keyword)
+      })
+      res.render('index', { restaurants: restaurantsSearch, keyword: keyword })
+    })
+    .catch(error => console.log(error))
 })
 
 //add new restaurant
