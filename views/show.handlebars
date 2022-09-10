@@ -29,11 +29,26 @@
         </span>
         {{restaurants.phone}}
       </p>
-
-      <p class="mb-5">
-        {{restaurants.description}}
+      <p class="mb-1">
+        <span class="text-secondary">
+          <i class="fas fa-utensils pr-2"></i>
+          評分：
+        </span>
+        {{restaurants.rating}}
       </p>
 
+      <p class="mb-3">
+        {{restaurants.description}}
+      </p>
+      <p>
+        <a href="/restaurants/{{restaurants._id}}/edit"><button type="button" class="btn btn-primary">編輯</button></a>
+        <a href="/">
+          <button type="button" class="float:right btn btn-secondary">返回</button>
+        </a>
+      <form action="/restaurants/{{ restaurants._id }}/delete" method="POST" style="display: inline;">
+        <button class="btn btn-danger" type="submit">delete</button>
+      </form>
+      </p>
       <img class="rounded mx-auto d-block mb-4 w-100" src="{{restaurants.image}}" alt="{{restaurants.name}}"
         style="max-width: 600px;">
     </div>

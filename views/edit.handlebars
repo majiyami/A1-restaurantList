@@ -1,0 +1,48 @@
+<h1 class="mb-1 restaurant-show-title">編輯餐廳：{{restaurant.name}}</h1>
+<div class="container">
+  <form action="/restaurants/{{restaurant._id}}/edit" method="POST">
+    <!--表單-->
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">店名</span>
+      <input type="text" class="form-control" id="name" name="name" placeholder="請輸入餐廳名稱..." value="{{restaurant.name}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">英文店名</span>
+      <input type="text" class="form-control" id="name_en" name="name_en" placeholder="請輸入餐廳英文名稱..." value="{{restaurant.name_en}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">類別</span>
+      <input type="text" class="form-control" id="category" name="category" placeholder="EX: 美式" value="{{restaurant.category}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">餐廳圖片</span>
+      <input type="text" class="form-control" id="image" name="image" placeholder="請輸入圖片連結" value="{{restaurant.image}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">地址</span>
+      <input type="text" class="form-control" iid="location" name="location" placeholder="EX: 台北市大安區..." value="{{restaurant.location}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">電話</span>
+      <input type="text" class="form-control" id="phone" name="phone" placeholder="(02)123..." value="{{restaurant.phone}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Google Map連結</span>
+      <input type="text" class="form-control" id="google_map" name="google_map" placeholder="請輸入Google地圖連結" value="{{restaurant.google_map}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">評分</span>
+      <input type="text" class="form-control" id="rating" name="rating" placeholder="請輸入評分(1~5)" value="{{restaurant.rating}}">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">資訊</span>
+      <textarea class="form-control" id="description" rows="5" name="description">{{restaurant.description}}</textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn btn-danger">送出</button>
+      <a href="/">
+        <button type="button" class="btn btn-secondary">返回</button>
+      </a>
+  </form>
+</div>
