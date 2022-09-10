@@ -16,13 +16,17 @@
   </div>
 </div>
 
+
 <!-- restaurant list -->
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
+      <a href="/restaurants/new">
+        <button type="button" class="btn btn-secondary">新增餐廳</button>
+      </a>
       <div class="card-columns row row-cols-4">
-        {{#each restaurants}}
-        <a href="/restaurants/{{this.id}}" class="text-secondary">
+       {{#each restaurants}}
+        <a href="/restaurants/{{this._id}}" class="text-secondary">
           <div class="card mb-3">
             <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
             <div class="card-body p-3">
@@ -45,3 +49,4 @@
     </div>
   </div>
 </div>
+
