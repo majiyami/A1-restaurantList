@@ -45,7 +45,7 @@
         <a href="/">
           <button type="button" class="float:right btn btn-secondary">返回</button>
         </a>
-      <form action="/restaurants/{{ restaurants._id }}/delete" method="POST" style="display: inline;">
+      <form action="/restaurants/{{ restaurants._id }}?_method=DELETE" method="POST" style="display: inline;">
         <button class="btn btn-danger" type="submit">delete</button>
       </form>
       </p>
