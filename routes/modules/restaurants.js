@@ -21,7 +21,7 @@ router.get('/restaurants/new', (req, res) => {
   return res.render('new')
 })
 
-router.post('/restaurants', (req, res) => {
+router.post('/', (req, res) => {
   const name = req.body.name
   const name_en = req.body.name_en
   const category = req.body.category
