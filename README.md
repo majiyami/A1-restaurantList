@@ -29,6 +29,6 @@
 ### 1. 下載檔案並確認已安裝node.js 與 npm
 ### 2. 啟動終端機至檔案資料夾輸入 npm install
 ### 3. 終端機輸入 npm run seed
-### 4. 終端機輸入 npm run start
+### 4. 終端機輸入 npm run 
 ### 5. 瀏覽器進入回覆網址：localhost:3000
 ### 6. 停用網站終端機按 ctrl+C 退出
