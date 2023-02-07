@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs')
 const FacebookStrategy = require('passport-facebook').Strategy
 const User = require('../models/user')
 
-//有疑問!? 參考教案與同學的作業都加入於app.js，但實際操作放在passport.js才能順利啟動，放在app.js無法讀到env檔案內容
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
